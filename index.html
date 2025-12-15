@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Portfolio Tracker</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="ext-light">
+    <div class="container my-4">
+      <h1 class="text-center mb-4 title">📈Stock Portfolio Tracker</h1>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="card bg-secondary h-100">
+            <div class="card-body">
+              <h5 class="card-title">Chart</h5>
+              <div class="mb-3">
+                <button class="btn btn-sm btn-dark range-btn" data-range="1mo">
+                  1M
+                </button>
+                <button class="btn btn-sm btn-dark range-btn" data-range="3mo">
+                  3M
+                </button>
+                <button class="btn btn-sm btn-dark range-btn" data-range="1y">
+                  1Y
+                </button>
+                <button class="btn btn-sm btn-dark range-btn" data-range="5y">
+                  5Y
+                </button>
+              </div>
+              <canvas id="stockChart"></canvas>
+              <div class="d-flex justify-content-between mt-5 text-dark">
+                <div>
+                    <strong>High:</strong>
+                    <span id="highprice">-</span>
+                </div>
+                <div>
+                    <strong>Low:</strong>
+                    <span id="lowprice">-</span>
+                </div>
+                <div>
+                    <strong>Current:</strong>
+                    <span id="currentprice">-</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="card bg-secondary h-100">
+            <div class="card-body">
+              <h5 class="card-title">Stock List</h5>
+              <div id="list-section">
+                <!-- Stock list will come here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="card bg-secondary">
+            <div class="card-body">
+              <h5 class="card-title text-center">Stock Details</h5>
+              <div id="details-section">
+                <!-- Stock details will come here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+  </body>
+</html>

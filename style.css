@@ -1,0 +1,41 @@
+body {
+  background-color: rgb(5, 5, 85);
+}
+
+.title {
+  color: white;
+}
+
+.card-body {
+  background-color: rgba(240, 248, 255, 0.72);
+  border-radius: 10px;
+}
+
+#list-section {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#list-section::-webkit-scrollbar {
+  width: 6px;
+}
+
+#list-section::-webkit-scrollbar-thumb {
+  background-color: #0077df;
+  border-radius: 10px;
+}
+
+/* Stock item */
+.stock-item {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.stock-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.stock-item.selected {
+  background-color: rgba(0, 119, 223, 0.3);
+  border-left: 4px solid #0077df;
+}
